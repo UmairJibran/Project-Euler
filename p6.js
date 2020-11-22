@@ -10,7 +10,8 @@ Hence the difference between the sum of the squares of the first ten numbers and
 Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 */
 
-const getSquare = number => number * number;
+const { getSquare } = require("./util");
+
 let sumOfTheSquares = 0;
 let squareOfTheSum = 0;
 let difference = 0;

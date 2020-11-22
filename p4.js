@@ -4,16 +4,7 @@ A Palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 */
 
-const reverseNumber = number => {
-   let reversedResult = [];
-
-   while (number > 1) {
-      reversedResult.push(Math.trunc(number % 10));
-      number /= 10;
-   }
-
-   return reversedResult.join("");
-};
+const { reverseNumber } = require("./util");
 
 let palindromeNumbers = [];
 
