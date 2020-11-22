@@ -16,8 +16,18 @@ const reverseNumber = number => {
 
 const getSquare = number => number * number;
 
+const isPrime = number => {
+   if (number == 2) return true;
+   if (number % 2 === 0) return false;
+   for (let i = 2; i < number; i++) {
+      if (number % i === 0) return false;
+   }
+   return true;
+};
+
 module.exports = {
    fib: fibonacci,
    reverseNumber: reverseNumber,
    getSquare: getSquare,
+   isPrime: isPrime,
 };
