@@ -25,9 +25,27 @@ const isPrime = number => {
    return true;
 };
 
+const sort = arr => {
+   let holePosition;
+   let valueToInsert;
+
+   for (let i = 1; i < arr.length; i++) {
+      valueToInsert = arr[i];
+      holePosition = i;
+      while (holePosition > 0 && arr[holePosition - 1] > valueToInsert) {
+         arr[holePosition] = arr[holePosition - 1];
+         holePosition = holePosition - 1;
+      }
+      arr[holePosition] = valueToInsert;
+   }
+
+   return arr;
+};
+
 module.exports = {
    fib: fibonacci,
    reverseNumber: reverseNumber,
    getSquare: getSquare,
    isPrime: isPrime,
+   sort: sort,
 };
