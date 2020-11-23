@@ -19,4 +19,4 @@ for (let i = 2; i <= remainder; i++) {
    }
 }
 
-console.log(primeFactors.sort()[0]);
+console.log(primeFactors[primeFactors.length - 1]);
