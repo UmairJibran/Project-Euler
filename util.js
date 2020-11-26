@@ -42,10 +42,21 @@ const sort = arr => {
    return arr;
 };
 
+const isAdjecent = (number1, number2) => {
+   if (
+      number1 - number2 === -1 ||
+      number1 === number2 ||
+      number1 - number2 === 1
+   )
+      return true;
+   return false;
+};
+
 module.exports = {
    fib: fibonacci,
    reverseNumber: reverseNumber,
    getSquare: getSquare,
    isPrime: isPrime,
    sort: sort,
+   isAdjecent: isAdjecent,
 };
